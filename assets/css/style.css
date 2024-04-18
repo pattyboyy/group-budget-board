@@ -1,0 +1,75 @@
+/* Remove the default margin and padding.
+   Html and body take up the full width & height of the viewport.
+      Remove default margin and padding.*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Set flexbox layout.
+        Stack children vertically.
+            Minimum height is full viewport height.*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*Allows the Youtube modal to resize*/
+.cursor-se-resize {
+  cursor: se-resize;
+}
+
+/*Keeps all the content in the modal*/
+#modalContent {
+  overflow: auto;
+}
+
+/*Custom Swim Lane Colors and formatting*/
+#essential {
+  background-color: #d1fae5;
+  border: 1px solid #a7f3d0;
+  box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#maybe {
+  background-color: #fef3c7;
+  border: 1px solid #fde68a;
+  box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#gonzo {
+  background-color: #fecaca;
+  border: 1px solid #fda4af;
+  box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-section {
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.category-section:hover {
+  box-shadow: inset 0 10px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+}
+
+/* Hide money meter on screens smaller than 640px */
+@media (max-width: 640px) {
+  #moneyMeterContainer {
+    display: none;
+  }
+}
